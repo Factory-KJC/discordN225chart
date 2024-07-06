@@ -11,9 +11,7 @@ import jpholiday
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
-TOKEN = "APP_TOKEN"
-
-# CHANNEL_ID = 1258377113367613591
+TOKEN = "APP_TOKEN" # Replace APP_TOKEN with your discord app token
 
 CH_NAME = "本日の日経平均"
 
