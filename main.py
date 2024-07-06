@@ -1,7 +1,3 @@
-import io
-import urllib.request
-from PIL import Image
-
 import discord
 from discord.ext import tasks
 from datetime import datetime
