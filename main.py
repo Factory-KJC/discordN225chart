@@ -40,7 +40,7 @@ async def on_ready():
 async def loop():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '15:01':
+    if now == '15:15':
         formateddate = datetime.now().strftime('%Y%m%d')
         if isBizDay(formateddate) == 1:
             img_in = n225mpl.n225plot()
@@ -48,8 +48,8 @@ async def loop():
             ch_name = CH_NAME
             for channel in client.get_all_channels():
                 if channel.name == ch_name:
-                    await channel.send(file=discord.File(img_in,"test.png"))
-                    await channel.send("本日の日経平均株価です")
+                    await channel.send(file=discord.File(img_in,"n225chart.png"))
+                    await channel.send(datetime.now().strftime('%Y/%m/%d')+"の日経平均株価です")
                     break
             guild = client.guilds
             current_guild = guild[0]

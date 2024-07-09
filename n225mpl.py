@@ -23,5 +23,5 @@ def n225plot():
     df = yf.download(tickers=name, start=start, end=end, interval=interval)
     df.head()
 
-    mpf.plot(df, type="candle", figratio = (3, 2), volume=True, style="yahoo",returnfig=True, closefig=True, savefig = buffer)
+    mpf.plot(df, type="candle", figratio = (3, 2), volume=False, style="yahoo",returnfig=True, closefig=True, savefig = buffer)
     return buffer
