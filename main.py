@@ -7,7 +7,7 @@ import jpholiday
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
-TOKEN = "APP_TOKEB" # Replace APP_TOKEN with your discord app token
+TOKEN = "APP_TOKEN" # Replace APP_TOKEN with your discord app token
 
 CH_NAME = "本日の日経平均"
 
