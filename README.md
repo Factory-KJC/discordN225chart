@@ -17,4 +17,4 @@ Pythonのyfinance, pmplfinanceなどが必要です．あと何か不足して�
 
 # Contact
 
-不明点やバグ報告は [X](x.com/KJC_UEC) までお願いします．
+緊急連絡は [X](x.com/KJC_UEC) までお願いします．
