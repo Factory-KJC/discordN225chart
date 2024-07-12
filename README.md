@@ -21,7 +21,7 @@ pip install -e ./discordN225chart
 
 権限は"Send Messages"と"Attach Files"が必要です.
 
-環境変数`DISCORDN225TOKEN`にdiscord developerで取得したトークンを設定してください．
+環境変数`DISCORDN225TOKEN`にはDiscord Developer Portalで取得したトークンを設定してください．
 
 毎日15時25分に「本日の日経平均」という名前のテキストチャンネルに投稿されます．ご自身で作成してください．
 
