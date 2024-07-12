@@ -9,13 +9,7 @@ import os
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
-# TOKEN.txtの内容をAPP_TOKENに代入する
-# APP_TOKEN.txt の絶対パスまたは相対パスを指定する
-token_file_path = os.path.join(os.path.dirname(__file__), 'data', 'APP_TOKEN.txt')
-# ファイルを読み込む
-with open(token_file_path, 'r') as f:
-    # ファイルの内容を読み込む
-    TOKEN = f.read().strip()  # strip() で先頭と末尾の余分な改行や空白を取り除く
+TOKEN = os.getenv('DISCORDN225TOKEN')
 
 CH_NAME = "本日の日経平均"
 
@@ -63,4 +57,5 @@ async def send_chart_to_channels(chart_image, formatted_date):
 
 
 # Botの実行
-client.run(TOKEN)
+def main():
+    client.run(TOKEN)
