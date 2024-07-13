@@ -12,8 +12,8 @@ Pythonが実行できる環境で動作します．
 ## インストール
 
 ```
-git clone https://github.com/Factory-KJC/discordN225chart.git
-pip install -e ./discordN225chart
+$ git clone https://github.com/Factory-KJC/discordN225chart.git
+$ pip install -e ./discordN225chart
 ```
 
 ## 各種設定
