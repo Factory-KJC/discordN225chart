@@ -1,4 +1,7 @@
+# ioをインポート
 import io
+# フォントファイルのパスを取得するためのpkg_resourcesをインポート
+import pkg_resources
 #yfinanceをインポート
 import yfinance as yf
 #matplotlibのfont_managerとmplfinanceとdatetimeをインポート
@@ -22,7 +25,7 @@ def n225plot():
     df.head()
 
     # スタイルの指定
-    font_path = '../fonts_and_licenses/NotoSansJP-VariableFont_wght.ttf'
+    font_path = pkg_resources.resource_filename(__name__,'fonts_and_licenses/NotoSansJP-VariableFont_wght.ttf')
     fm.fontManager.addfont(font_path)
     cs = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'Noto Sans JP'})
 
