@@ -30,5 +30,5 @@ def n225plot():
     cs = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'Noto Sans JP'})
 
     # プロットしてBytesIOとして返す
-    mpf.plot(df, type="candle", title='日経平均株価', ylabel='株価', figratio = (18, 12), volume=False, style=cs ,returnfig=True, closefig=True, savefig=buffer)
+    mpf.plot(df, type="candle", title='日経平均株価', ylabel='株価', figratio = (18, 12), volume=False, style=cs , tight_layout=True, returnfig=True, closefig=True, savefig=buffer)
     return buffer
