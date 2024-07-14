@@ -27,7 +27,7 @@ def n225plot():
     # スタイルの指定
     font_path = importlib.resources.files('discordN225chart.fonts_and_licenses').joinpath('NotoSansJP-VariableFont_wght.ttf')
     fm.fontManager.addfont(font_path)
-    cs = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'Noto Sans JP'})
+    cs = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'Noto Sans JP', 'font.size':30})
 
     # プロットしてBytesIOとして返す
     mpf.plot(df, type="candle", title='日経平均株価', ylabel='株価', figratio = (18, 12), volume=False, style=cs , tight_layout=True, returnfig=True, closefig=True, savefig=buffer)
