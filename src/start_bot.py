@@ -1,7 +1,7 @@
 import discord
 from discord.ext import tasks
 from datetime import datetime
-import src.n225mpl as n225mpl
+import src.n225mpf as n225mpf
 import jpholiday
 from discord import File
 import os
@@ -40,7 +40,7 @@ async def loop():
     if now == '15:25':
         formatted_date = datetime.now().strftime('%Y%m%d')
         if is_biz_day(formatted_date):
-            chart_image = n225mpl.n225plot()
+            chart_image = n225mpf.n225plot()
             await send_chart_to_channels(chart_image, formatted_date)
 
 # チャートををチャンネルに送信する関数
@@ -51,9 +51,8 @@ async def send_chart_to_channels(chart_image, formatted_date):
             chart_file = File(fp=chart_image, filename="n225chart.png")
             await channel.send(file=chart_file)
             await channel.send(f"{datetime.now().strftime('%Y/%m/%d')}の日経平均株価です")
-
-    for guild in client.guilds:
-                print(f"Successfully sent to {guild.name}!")
+            guild = channel.guild
+            print(f"Successfully sent to {guild.name}!")
 
 
 # Botの実行
