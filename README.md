@@ -9,6 +9,12 @@ Discord上で日経平均株価のチャートを表示するbotです．
 
 Pythonが実行できる環境で動作します．
 
+## 動作確認
+* Python -> Python3.12.4
+* OS ->
+  * Windows11
+  * Raspberry Pi OS(Debian GNU/Linux 12)
+
 ## インストール
 
 ```
