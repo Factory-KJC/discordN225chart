@@ -51,9 +51,8 @@ async def send_chart_to_channels(chart_image, formatted_date):
             chart_file = File(fp=chart_image, filename="n225chart.png")
             await channel.send(file=chart_file)
             await channel.send(f"{datetime.now().strftime('%Y/%m/%d')}の日経平均株価です")
-
-    for guild in client.guilds:
-                print(f"Successfully sent to {guild.name}!")
+            guild = channel.guild
+            print(f"Successfully sent to {guild.name}!")
 
 
 # Botの実行
