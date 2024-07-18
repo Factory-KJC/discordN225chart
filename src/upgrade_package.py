@@ -10,10 +10,10 @@ def upgrade_package(package_name):
         )
 
         # Check the output for success message
-        if "Requirement already satisfied" in result.stdout:
-            print(f'{package_name} is already up-to-date.')
-        elif result.returncode == 0:
+        if "Successfully installed" in result.stdout:
             print(f'{package_name} has been successfully upgraded.')
+        elif "Requirement already satisfied" in result.stdout:
+            print(f'{package_name} is already up-to-date.')
         else:
             print(f'Failed to upgrade {package_name}.')
             print(result.stdout)
@@ -21,4 +21,3 @@ def upgrade_package(package_name):
 
     except Exception as e:
         print(f'An error occurred while upgrading {package_name}: {e}')
-
