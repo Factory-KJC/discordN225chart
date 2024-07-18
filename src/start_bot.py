@@ -2,6 +2,7 @@ import discord
 from discord.ext import tasks
 from datetime import datetime
 import src.n225mpf as n225mpf
+import src.upgrade_package as upgrade
 import jpholiday
 from discord import File
 import os
@@ -41,10 +42,13 @@ async def loop():
         formatted_date = datetime.now().strftime('%Y%m%d')
         if is_biz_day(formatted_date):
             chart_image = n225mpf.n225plot()
-            await send_chart_to_channels(chart_image, formatted_date)
+            await send_chart_to_channels(chart_image)
+        else:
+            upgrade.upgrade_package('pip')
+            upgrade.upgrade_package('jpholiday')
 
 # チャートををチャンネルに送信する関数
-async def send_chart_to_channels(chart_image, formatted_date):
+async def send_chart_to_channels(chart_image):
     for channel in client.get_all_channels():
         if channel.name == CH_NAME:
             chart_image.seek(0)
