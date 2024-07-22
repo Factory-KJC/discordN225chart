@@ -2,5 +2,5 @@ discord.py==2.4.0
 jpholiday==0.1.10
 matplotlib==3.9.1
 mplfinance==0.12.10b0
-setuptools==70.3.0
+setuptools==71.1.0
 yfinance==0.2.40
