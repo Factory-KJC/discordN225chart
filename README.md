@@ -5,7 +5,7 @@ Discord上で日経平均株価のチャートを表示するbotを動かすた�
 
 # 利用方法
 
-Pythonが実行できる環境で動作します．
+Python3が実行できる環境で動作します．
 
 ## 動作確認
 * Python -> Python3.12.4
@@ -22,10 +22,21 @@ $ pip install -e ./discordN225chart
 
 ## 各種設定
 
+### Discord Developper Portalの設定
 
 権限は"Send Messages"と"Attach Files"が必要です.
 
+トークンを取得してください．
+
+### サーバー側の設定
+
 環境変数`DISCORDN225TOKEN`にDiscord Developer Portalで取得したトークンを設定してください．
 
+### チャンネルの設定
 毎日15時25分に「本日の日経平均」という名前のテキストチャンネルに投稿されます．ご自身で作成してください．
 
+## 実行
+
+```
+$ python3 discordn225chart
+```
